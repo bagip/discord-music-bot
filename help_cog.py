@@ -35,6 +35,9 @@ class help_cog(commands.Cog):
     @commands.command(name = "strahinja", help = "Ker woof woof")
     async def strahinja(self, ctx):
         await ctx.send("Kerina common L")
+    @commands.command(name = "aleksa", help = "Ker woof woof")
+    async def aleksa(self, ctx):
+        await ctx.send("Aleksa je peder")
 
     async def send_to_all(self, msg):
         for text_channel in self.text_channel_list:
