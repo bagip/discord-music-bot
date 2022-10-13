@@ -143,4 +143,4 @@ class music_cog(commands.Cog):
 
     @commands.command(name = "join", aliases = ["j"], help = "Join a voice chat")
     async def join(self, ctx):
-        self.vc.move_to(ctx.author.voice.channel)
+        await self.vc.move_to(ctx.author.voice.channel)
