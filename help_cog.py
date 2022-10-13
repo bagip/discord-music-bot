@@ -26,15 +26,16 @@ class help_cog(commands.Cog):
             for channel in guild.text_channels:
                 self.text_channel_list.append(channel)
 
-        await self.send_to_all("Aleksa je peder")        
+        await self.send_to_all()        
 
     @commands.command(name="help", help="Displays all the available commands")
     async def help(self, ctx):
         await ctx.send(self.help_message)
 
-    @commands.command(name = "strahinja", help = "Ker woof woof")
+    @commands.command(name = "strahinja", help = "Strahinja ker")
     async def strahinja(self, ctx):
         await ctx.send("Kerina common L")
+        await ctx.send("https://cdn.discordapp.com/attachments/853680766956732416/1030245212955623476/strahinja.png")
     @commands.command(name = "aleksa", help = "Ker woof woof")
     async def aleksa(self, ctx):
         await ctx.send("Aleksa je peder")
