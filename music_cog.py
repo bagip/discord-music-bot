@@ -14,7 +14,7 @@ class music_cog(commands.Cog):
 
         # 2d array containing [song, channel]
         self.music_queue = []
-        self.YDL_OPTIONS = {'format': 'bestaudio', 'noplaylist':'True'}
+        self.YDL_OPTIONS = {'format': 'bestaudio'}
         self.FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
 
         self.vc = None
@@ -143,4 +143,5 @@ class music_cog(commands.Cog):
 
     @commands.command(name = "join", aliases = ["j"], help = "Join a voice chat")
     async def join(self, ctx):
-        await self.vc.move_to(ctx.author.voice.channel)
+        voice_channel = ctx.author.voice.channel
+        await self.vc.move_to(voice_channel)
