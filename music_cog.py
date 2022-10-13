@@ -140,3 +140,7 @@ class music_cog(commands.Cog):
         self.is_playing = False
         self.is_paused = False
         await self.vc.disconnect()
+
+    @commands.command(name = "join", aliases = ["j"], help = "Join a voice chat")
+    async def join(self, ctx):
+        self.vc.move_to(ctx.author.voice.channel)
