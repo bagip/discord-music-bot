@@ -39,7 +39,7 @@ class help_cog(commands.Cog):
         await ctx.send("https://cdn.discordapp.com/attachments/853680766956732416/1030245212955623476/strahinja.png")
     @commands.command(name = "aleksa", help = "Ker woof woof")
     async def aleksa(self, ctx):
-        await ctx.send("Aleksa je peder")
+        await ctx.send("Aleksa je pedercina")
 
     async def send_to_all(self, msg):
         for text_channel in self.text_channel_list:
