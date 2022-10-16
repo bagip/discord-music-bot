@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from discord import member
 
 class help_cog(commands.Cog):
     def __init__(self, bot):
@@ -26,7 +27,7 @@ class help_cog(commands.Cog):
             for channel in guild.text_channels:
                 self.text_channel_list.append(channel)
 
-        await self.send_to_all()        
+        await self.send_to_all()  
 
     @commands.command(name="help", help="Displays all the available commands")
     async def help(self, ctx):
