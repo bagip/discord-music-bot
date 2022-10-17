@@ -1,1 +1,1 @@
-Worker: python ~/bin/main.py
+Worker: python main.py
