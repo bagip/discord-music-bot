@@ -1,4 +1,5 @@
 from ast import alias
+from tkinter import N
 import discord
 from discord.ext import commands
 
@@ -35,7 +36,7 @@ class music_cog(commands.Cog):
 
             #get the first url
             m_url = self.music_queue[0][0]['source']
-
+            
             #remove the first element as you are currently playing it
             self.music_queue.pop(0)
 
@@ -121,8 +122,8 @@ class music_cog(commands.Cog):
         retval = ""
         for i in range(0, len(self.music_queue)):
             # display a max of 5 songs in the current queue
-            if (i > 4): break
-            retval += self.music_queue[i][0]['title'] + "\n"
+            if (i > 5): break
+            retval += "{}. ".format(i+1) + self.music_queue[i][0]['title'] + "\n"
 
         if retval != "":
             await ctx.send(retval)
@@ -146,3 +147,10 @@ class music_cog(commands.Cog):
     async def join(self, ctx):
         voice_channel = ctx.author.voice.channel
         await self.vc.move_to(voice_channel)
+
+    @commands.command(name = "delete")
+    async def delete(self, ctx, content:int):
+        del self.music_queue[int(content - 1)]
+        await ctx.send("Deleted")
+
+
