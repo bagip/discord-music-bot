@@ -12,7 +12,7 @@ intents.members = True
 
 bot = commands.Bot(command_prefix="!", intents=intents, help_command=None)
 
-token = "ODg4MjYwNjE5MDQyNzAxMzMy.G8C2DY.ocPgEC8V_KgcleT2g4N4iVhgZdQKyNd-6yVCV4"
+token = "TOKEN"
 
 async def load():
     await bot.add_cog(help_cog(bot))

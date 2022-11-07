@@ -33,13 +33,10 @@ class help_cog(commands.Cog):
     async def help(self, ctx):
         await ctx.send(self.help_message)
 
-    @commands.command(name = "strahinja", help = "Strahinja ker")
-    async def strahinja(self, ctx):
-        await ctx.send("Kerina common L")
+    @commands.command(name = "dog", help = "dog")
+    async def dog(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/853680766956732416/1030245212955623476/strahinja.png")
-    @commands.command(name = "aleksa", help = "Ker woof woof")
-    async def aleksa(self, ctx):
-        await ctx.send("Aleksa je pedercina")
+    
 
     async def send_to_all(self, msg):
         for text_channel in self.text_channel_list:
